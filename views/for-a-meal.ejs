@@ -6,41 +6,73 @@
     <title>Document</title>
     <link rel="stylesheet" href="/for-a-meal.css">
 </head>
+<header>
+    <div class="navbar">
+    <img src="https://st4.depositphotos.com/10544526/22304/v/450/depositphotos_223047002-stock-illustration-chef-logo-cook-emblem-chef.jpg">
+    <a href="/login"><button class="logout">Logout</button></a>
+</div>
+</header>
 <body>
-    <a href="/login">Logout</a>
+
+   
+    <section class="header">
+    <h1>Discover the new, easy way<br>to book a <span style="color:teal">private chef</span></h1>
+    <div style="height:17px; width:230px; background-color: teal;position: absolute; top:67px;left:300px; z-index: -1;"></div>
+    <div class="header_intro">
+     <div class="intro">
+      <p>Tired of the same dining options? Get professionally prepared meals from home! Our website connects you with skilled chefs for any craving. Experience fine dining without leaving comfort and taste.</p>
+      <button class="intro_button logout">
+        Get Started
+      </button>
+    </div>
+      <div class="intro_image">
+        
+      </div>
+    </div>
+    </section>
     <form action="/for-a-meal" method="post">
-        <h3>We are currently available in</h3>
+        <h2>We are currently available in</h2>
     <div class="service_location">
         
-        <button class="location_button" name="location" value="delhi" style="background-image: url('https://www.shutterstock.com/image-vector/hand-drawn-sketch-illustration-india-600nw-704253736.jpg'); ">
-         DELHI
-        </button>
+        <button class="location_button" name="location" value="delhi" style="background-image: url('https://www.shutterstock.com/image-vector/hand-drawn-sketch-illustration-india-600nw-704253736.jpg'); " aria-selected="true">
+         <label>DELHI</label>
+         <div class="location_overlay"></div>
+        </button> 
         <button class="location_button" name="location" value="noida" style="background-image: url('https://media.istockphoto.com/id/1499280572/vector/welcome-to-noida-gate-delhi-ncr-stock-icon.jpg?s=612x612&w=0&k=20&c=j2ZoVLsCXC62rmkURDJjQYp9qPmMEH_YKj43ZWhSB6U=');">
-            NOIDA
+            <label> NOIDA</label>
+            <div class="location_overlay"></div>
         </button>
         <button class="location_button" name="location" value="ghaziabad" style="background-image: url('https://www.pinterest.com/pin/681873199814153158/');">
-            GHAZIABAD
+            <label> GHAZIABAD</label>
+            <div class="location_overlay"></div>
         </button>
     
     </div>
     </form>
    
     <form action="/cuisine" method="get">
+        <hr>
+        <h2>Pick Your Chef</h2>
+        <hr>
     <div class="chefs">
         <%if(locals.chefData) {%>
         <%chefData.forEach((data)=>{ %>
-           <div class="chefs_data">
-                <h2><%= data.name %></h2>
-                <p><%= data.city %></p>
-                <p>Price: 200 Rupees</p>
+           <div class="chefs_data location_button" id="chef<%=data.id%>">
+                <div id="data">
+                    <div style="display:flex; gap:90px;">
+                <h3><%= data.name.toUpperCase() %></h3>
+                <h3><%= data.city.toUpperCase() %></h3> </div>
+                <h3>Price: <span style="color: turquoise;">200 Rupees</span></h3>
+            </div>
                 <input type="submit" value="book"></input>
+                <div class="location_overlay"></div>
            </div>
 
       <% }) } %>
     </div>
 </div>
 </form>
-    <p id="demo"></p>
+    <!-- <p id="demo"></p> -->
     <script src="js/for-a-meal.js" charset="UTF-8"></script>
 </body>
 </html>

@@ -14,41 +14,60 @@
 
 </head> 
 <body>
-    <section class="booking_page">
-    <div class="booking_details">
     <h1>Confirm Your Booking</h1>
-    <h3>Menu:</h3>
+    <section class="booking_page">
+        <div class="details">
+        <div class="location_details">
+            <div>
+                <h3>Contact Information</h3>
+            <input class="info" type="text" placeholder="Full Name" name="fullname" required>
+            <input class="info"  type="tel" placeholder="Phone Number" name="phonenumber" required>
+            <input class="info" type="text" name="Address_Line_1" placeholder="Address Line 1" required>
+            <input class="info" type="text" name="Address_Line_2" placeholder="Address Line 2">
+            <input class="info" tyep="number" name="pincode" placeholder="Pin Code" required> 
+         </div>
+        <h4>Your Location:</h4>
+            <div id="map"></div>
+            
+        </div>
+        <div class="Payment_Details">
+
+        </div>
+    </div>
+    <div class="booking_details">
+    <h3>Booking Details</h3>
+    <h4>Menu:</h4>
     <%if(locals.Menu)%>
     <p><%=Menu%></p>
-
-    <h3>Number of People</h3>
+    <hr>
+    <h4>Number of People</h4>
     <%if(locals.guests){%>
     <p><%=guests%></p>
     <%}%>
-    <h3>Booking Date</h3>
+    <hr>
+    <h4>Booking Date</h4>
     <%if(locals.bookingDate){%>
         <p><%=bookingDate%></p>
         <%}%>
-    <h3>
+        <hr>
+    <h4>
     Timing
-    </h3>
+    </h4>
     <%if(locals.timing){%>
         <p><%=timing%></p>
         <%}%>
-
-    <h3>Total Bill</h3>
+ <hr>
+    <h4>Total Bill</h4>
 
         <%if(locals.totalAmount){%>
             <p><%=totalAmount%></p>
             <%}%>
+
+
     </div>
-  <div class="location_details">
-    <div>
-        <h3>Your Location:</h3>
-    </div>
-    <div id="map"></div>
-</div>
+   
 </section>
+<input type="submit" name="Confirm Booking" value="Confirm Booking" id="submit">    
     <script src="js/bookingjs.js" charset="UTF-8"></script>
 </body>
 </html>

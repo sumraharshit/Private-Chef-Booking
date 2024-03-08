@@ -1,34 +1,259 @@
-*{
-    margin:0px;
-    padding:0px;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
+header{
+    width:100%;
+    padding:10px;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+img,.logout{
+    flex-shrink: 1;
+}
+.logout{
+    margin-right: 20px;
+}
+img{
+    width: 100px;
+    margin-left: 20px;
+}
 .service_location{
     display: flex;
     justify-content: space-around;
-    margin:0px; 
+    margin:40px 0px 80px 0px; 
    
 }
 
+
 .location_button{
     background-position: center;
-   background-size: ;
-    border-radius: 10px;
-    border: 2px solid turquoise;
+   background-size: cover;
+    border: 2px solid teal;
     margin: 10px;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 150px;
     width: 200px;
     cursor: pointer;
-    
+    position:relative;
 }
+
+.location_overlay{
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    content:"";
+    background-color: teal;
+    position:absolute;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.location_button:hover .location_overlay{
+    opacity:0.7;
+}
+.location_button:hover label{
+    color:white
+} 
+
 
 .chefs{
     display: flex;
+    justify-content: space-evenly;
+    margin:60px 20px;
 }
 
 .chefs_data{
     border: none;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#data{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    top: 100%;
+    left: 5%;
+    gap: 10px;
+    width: 100%;
+}
+h2{
+    font-size: 40px;
+    text-align:center;
+}
+
+h3{
+   font-size:17px;
+}
+
+label{
+    position: absolute;
+    z-index: 2;
+    font-size:23px;
+    color:black;
+    font-weight: 800;
+    bottom: 0;
+    left: 5%;
+}
+
+#chef1,#chef2,#chef3,#chef4,#chef5,#chef6,#chef7,#chef8,#chef9{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#chef1{
+    background-image: url("https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNoZWZ8ZW58MHx8MHx8fDA%3D");
+   
+}
+
+#chef2{
+
+    background-image: url("https://images.unsplash.com/photo-1617473345933-609b7153daf4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGNoZWZ8ZW58MHx8MHx8fDA%3D");
+   
+}
+#chef3{
+    background-image: url("https://images.unsplash.com/photo-1574966740637-12c84035a4f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGNoZWZ8ZW58MHx8MHx8fDA%3D");
+   
+}
+
+#chef4{
+    background-image: url("https://images.unsplash.com/photo-1622221410151-2e0c403c5c38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGNoZWZ8ZW58MHx8MHx8fDA%3D");
+   
+}
+
+#chef5{
+    background-image: url("https://images.unsplash.com/photo-1592332297790-c7c27c38ecb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA4fHxjaGVmfGVufDB8fDB8fHww");
+   
+}
+
+#chef5{
+    background-image: url("https://plus.unsplash.com/premium_photo-1682092183552-ce2b04e67e7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUzfHxjaGVmfGVufDB8fDB8fHww");
+   
+}
+
+#chef6{
+    background-image: url("https://images.unsplash.com/photo-1583394293211-45718f7eb6b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUxfHxjaGVmfGVufDB8fDB8fHww");
+   
+}
+
+#chef7{
+    background-image: url("https://plus.unsplash.com/premium_photo-1661778003577-b5f7dfc8aac1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ5fHxjaGVmfGVufDB8fDB8fHww");
+   
+}
+
+#chef8{
+    background-image: url("https://images.unsplash.com/photo-1572173838181-589fc8c0a10a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjY3fHxjaGVmfGVufDB8fDB8fHww");
+   
+}
+
+#chef9{
+    background-image: url("https://images.unsplash.com/photo-1581294958576-36903fe82ed4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   
+}
+
+input{
+    position:absolute;
+    top: 145px;
+    left: 120px;
+    z-index:2;
+    display: none;
+    transition: display .5s ease-in-out;
+    height:40px;
+    width:110px;
+    border: none;
+    font-size:20px;
+    font-weight:400;
+    cursor: pointer;
+}
+
+.chefs_data:hover input{
+    display:block;
+}
+
+.logout{
+    background-color: teal;
+    color:white;
+    border-radius: 3px;
+    border:none;
+    font-weight: 500;
+    font-size:20px;
+    height: 50px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.header{
+    position: relative;
+    height: 800px;
+    margin-bottom:160px;
+    
+}
+
+.header_intro{
+    height:350px;
+    width:100%;
+    background-color: teal;
+    margin:180px 0px;
+    display: flex;
+    padding: 40px 0px;
+    align-items:center;
+    justify-content: center;
+   
+}
+
+h1{
+    text-align: center;
+    top:30px;
+    left:50px;
+    font-size:80px;
+    font-weight:800;
+    z-index:1;
+    margin:80px 0px;
+}
+.intro{
+    height:300px;
+    width:800px;
+    display:flex;
+    flex-direction: column;
+    font-weight: 550;
+    font-size:35px;
+    margin: 0px 30px;
+    gap:28px;
+}
+
+.intro_button{
+     background-color: white;
+     color:black;
+     width: 220px;
+}
+.intro_image{
+    background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKadPVU7XmHE/v1/1400x934.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:350px;
+    border-radius: 7px;
+    width:400px;
+    margin: 0px 30px;
+}
+
+hr{
+    height: 5px;
+    border-radius:4px;
+    background-color: teal;
+    margin: 30px 380px 25px 380px;
 }
