@@ -31,6 +31,11 @@
   <li>bcrypt (Password Hashing)</li>
   <li>Leaflet.js (Maps)</li>
   <li>nodemon (Development Server)</li>
-  <li>flash (Session Messages)</li>
-  
+  <li>flash (Session Messages)</li>  
+</ul>
+
+<h2>Acknowedgments</h2>
+<ul>
+  <li><b>Leaflet.js:</b>[https://leafletjs.com/ for the interactive maps](https://leafletjs.com/ for the interactive maps.).</li>
+  <li><b>PostgreSQL:</b>https://leafletjs.com/ for the interactive maps.</li>
 </ul>
