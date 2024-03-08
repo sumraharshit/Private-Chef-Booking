@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu_selector{
+    display: flex;
+    margin-bottom: 50px;
+}
+.cuisine_selector{
+    width: 1100px;
+}
+
+#indian{
+    background-image: url("https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/l-intro-1645057933.jpg");
+} 
+#chinese{
+background-image: url("https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F3194%2Ftrend20210823114529.jpg");
+}
+#japanese{
+background-image: url("https://ihmnotessite.com/wp-content/uploads/2020/04/JC1-1024x685.jpg");
+}
+#french{
+background-image: url("https://ihmnotessite.com/wp-content/uploads/2020/04/FC1.jpg");
+}
+#italian{
+    background-image: url("https://yourkitchenkart.com/wp-content/uploads/2023/08/italiancuisine.jpeg");
+}
+
+#mexican{
+    background-image: url("https://www.thedailymeal.com/img/gallery/mexican-food-can-be-traced-all-the-way-back-to-7000-bc/intro-1674486308.jpg");
+}
+.cuisine{
+    position: relative;
+    background-size: cover;
+    height: 230px;
+    width: 300px;
+    margin: 25px;
+    opacity: 0.9;
+    color: white;
+    border: none;
+    float: left;
+}
+
+.cuisine::after {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    content: "";
+    background-color: turquoise;
+    z-index: 1;
+    opacity: 0;
+    
+}
+
+.cuisine:hover::after{
+    opacity: 0.8;
+    z-index: 1;
+    
+    transition: opacity .5s ease-in-out;
+}
+
+.cuisine_button{
+    position:absolute;
+    top: 90px;
+    left: 110px;
+    z-index:2;
+    display: none;
+    transition: display .5s ease-in-out;
+    height:40px;
+    width:90px;
+    border: none;
+    font-size:18px;
+    font-weight:300;
+    cursor: pointer;
+
+}
+
+.cuisine:hover .cuisine_button{
+    display:block;
+   
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+
+#user_menu{
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    margin: 25px;
+    box-shadow: 7px 7px 50px grey;
+    font-size:20px;
+    align-content: space-around;
+   justify-content: space-evenly;
+}
+
+.menu, .bill{
+    margin: 20px;
+}
+
+.vertical_line{
+ border-left: 4px solid black;
+ height: 70px;
+ border-radius: 3px;
+}
+.details{
+    background-color: turquoise;
+    font-size: larger;
+    font-weight: 600;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#persons,#date{
+    width:250px;
+    height: 25px;
+    font-size:15px;
+}
+#date{
+    width:150px;
+}
+
+.instructions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.instructions>input{
+    width: 700px;
+     height: 150px; 
+     border: 2px solid turquoise; 
+     font-size: large; 
+     margin:10px;
+}
+
+h2{
+    font-size: 45px;
+}
+span{
+    color:turquoise;
+    font-size: 45px;
+    font-weight:400px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.submit>input{
+    border: none;
+    width:400px;
+    font-size: 20px;
+    font-weight:600;
+    height: 60px;
+    color: white;
+    background-color: turquoise;
+    cursor: pointer;
+}

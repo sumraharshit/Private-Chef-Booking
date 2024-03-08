@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#map { height: 180px; }
+
+.booking_page{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+   
+}
+
+.booking_details{
+   display: flex;
+   flex-direction: column;
+   width:800px;
+   height: 100%;
+   margin:20px;
+   justify-content: center;
+   align-items: start;
+   gap: 20px;
+}
+
+.location_details{
+    width:800px;
+    height: 100%;
+    margin:20px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h3{
+    font-size: 30px;
+}

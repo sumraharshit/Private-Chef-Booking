@@ -1,0 +1,34 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.service_location{
+    display: flex;
+    justify-content: space-around;
+    margin:0px; 
+   
+}
+
+.location_button{
+    background-position: center;
+   background-size: ;
+    border-radius: 10px;
+    border: 2px solid turquoise;
+    margin: 10px;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 200px;
+    cursor: pointer;
+    
+}
+
+.chefs{
+    display: flex;
+}
+
+.chefs_data{
+    border: none;
+    height: 400px;
+    width: 400px;
+}

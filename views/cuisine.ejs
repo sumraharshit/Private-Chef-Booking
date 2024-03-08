@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cuisine.css">
+    <title>Document</title>
+</head>
+<body>
+   <form action="/booking" method="post">
+    <h2>What are you craving for?</h2>
+    <div class="menu_selector">
+<div class="cuisine_selector">
+    <div id="indian" class="cuisine">
+    <input type="button" value="Indian" id="Indian" class="cuisine_button" name ="cuisine"></div>
+    
+   <div id="chinese" class="cuisine">
+    <input type="button" value="Chinese" id="Chinese" class="cuisine_button" name ="cuisine"></div>
+ 
+    <div id="mexican" class="cuisine">
+    <input type="button" value="Mexican" id="Mexican" class="cuisine_button" name ="cuisine"></div>
+
+    <div id="italian" class="cuisine">
+    <input type="button" value="Italian" id="Italian" class="cuisine_button" name ="cuisine"></div>
+
+    <div id="french" class="cuisine">
+    <input type ="button" value="French" id="French" class="cuisine_button" name ="cuisine"></div>
+
+    <div id="japanese" class="cuisine">
+    <input type="button" value="Japanese" id="Japanese" class="cuisine_button" name ="cuisine"></div>
+</div>
+<div id="user_menu">
+    
+    <div class="menu" aria-required="true">
+      <div>
+        <h3>SELECT EXOTIC MENU FROM OUR<br><span class="changing"></span><br>CUISINES</h3>
+      </div> 
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <script>
+        let typed = new Typed(".changing",{
+            strings: ["INDIAN","CHINESE","MEXICAN","ITALIAN","FRENCH","JAPANESE"],
+            typeSpeed:170,
+            backSpeed:170,
+            loop: true
+        })
+      </script> 
+    </div>
+ 
+   <div class="bill" name="meal_bill"></div>
+   
+</div>
+
+</div>
+    <div  class="details">
+    <div>
+     <label for="persons">Select The Number of Persons:</label>
+     <select id="persons" name="people" required>
+        <option disabled selected value="">Number of Persons</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        <option value=6>More Than 5</option>
+     </select>
+    </div>
+    <div  class="vertical_line"></div>
+    <div>
+     <label for="date">Select The Booking Date:</label>
+     <input type="date" id="date" max="2024-12-31" name="date" required>
+    </div>
+
+     <div  class="vertical_line"></div>
+    <div>
+     <label><input type="radio" value="BreakFast" name="timings" id="BreakFast" required>BreakFast</label>
+     <label><input type="radio" value="Lunch" name="timings" id="BreakFast">Lunch</label>
+    <label><input type="radio" value="Dinner" name="timings" id="BreakFast">Dinner</label>
+    </div>
+</div>
+    <div class="instructions">
+        <h3 style="font-size:x-large">Something Special Instructions on Your Mind? Tell Our Chef Know About It.</h3>
+        <input type="text" placeholder="e.g. I would prefer less spicy food">
+    </div>
+
+    <div class="submit">
+    <input type="submit" style="width:200px;height:60px;">
+</div>
+
+   
+    
+</form>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/cuisinejs.js"></script>
+</body>
+</html>

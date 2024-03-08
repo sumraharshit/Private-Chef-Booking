@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <head lang="en">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Credentials</title>
+  <link rel="stylesheet" href="/signup.css">
+  </head>
+  <body>
+  <div class="container">
+        
+
+      <div class="form-details">
+       <h3 style="font-size: 25px;">Login To Your Account</h3>
+        <form action="/login" method="post">
+          <ul class="success errors">
+            <% if(messages.success_msg) {%>
+              <li>
+                <%= messages.success_msg %>
+              </li>
+              <% } %>
+            </ul>
+
+            <ul class="errors">
+              <% if(messages.error){ %>
+                <li><%= messages.error %></li>
+            <% } %>
+            </ul>
+       <div class="login">
+        <input class="entries" name="email" type="email" placeholder="Enter Your E-Mail" required>
+        <input class="entries" name="password" type="password" placeholder="**password**" required>
+        <input type="submit" class="register-btn" value="Login">
+       </div>
+      </form> 
+      <p style="font-size: 17px;">NEW ON PLATFORM? <a style="color:turquoise; " href="/register">REGISTER HERE</a></p>
+    </div>
+      
+  </div>
+
+    <script src="js/signup.js" charset="UTF-8"></script>
+  </body>
+</html> 

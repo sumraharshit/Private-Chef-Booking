@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="/booking.css">
+
+</head> 
+<body>
+    <section class="booking_page">
+    <div class="booking_details">
+    <h1>Confirm Your Booking</h1>
+    <h3>Menu:</h3>
+    <%if(locals.Menu)%>
+    <p><%=Menu%></p>
+
+    <h3>Number of People</h3>
+    <%if(locals.guests){%>
+    <p><%=guests%></p>
+    <%}%>
+    <h3>Booking Date</h3>
+    <%if(locals.bookingDate){%>
+        <p><%=bookingDate%></p>
+        <%}%>
+    <h3>
+    Timing
+    </h3>
+    <%if(locals.timing){%>
+        <p><%=timing%></p>
+        <%}%>
+
+    <h3>Total Bill</h3>
+
+        <%if(locals.totalAmount){%>
+            <p><%=totalAmount%></p>
+            <%}%>
+    </div>
+  <div class="location_details">
+    <div>
+        <h3>Your Location:</h3>
+    </div>
+    <div id="map"></div>
+</div>
+</section>
+    <script src="js/bookingjs.js" charset="UTF-8"></script>
+</body>
+</html>

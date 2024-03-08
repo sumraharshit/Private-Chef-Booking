@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/for-a-meal.css">
+</head>
+<body>
+    <a href="/login">Logout</a>
+    <form action="/for-a-meal" method="post">
+        <h3>We are currently available in</h3>
+    <div class="service_location">
+        
+        <button class="location_button" name="location" value="delhi" style="background-image: url('https://www.shutterstock.com/image-vector/hand-drawn-sketch-illustration-india-600nw-704253736.jpg'); ">
+         DELHI
+        </button>
+        <button class="location_button" name="location" value="noida" style="background-image: url('https://media.istockphoto.com/id/1499280572/vector/welcome-to-noida-gate-delhi-ncr-stock-icon.jpg?s=612x612&w=0&k=20&c=j2ZoVLsCXC62rmkURDJjQYp9qPmMEH_YKj43ZWhSB6U=');">
+            NOIDA
+        </button>
+        <button class="location_button" name="location" value="ghaziabad" style="background-image: url('https://www.pinterest.com/pin/681873199814153158/');">
+            GHAZIABAD
+        </button>
+    
+    </div>
+    </form>
+   
+    <form action="/cuisine" method="get">
+    <div class="chefs">
+        <%if(locals.chefData) {%>
+        <%chefData.forEach((data)=>{ %>
+           <div class="chefs_data">
+                <h2><%= data.name %></h2>
+                <p><%= data.city %></p>
+                <p>Price: 200 Rupees</p>
+                <input type="submit" value="book"></input>
+           </div>
+
+      <% }) } %>
+    </div>
+</div>
+</form>
+    <p id="demo"></p>
+    <script src="js/for-a-meal.js" charset="UTF-8"></script>
+</body>
+</html>
