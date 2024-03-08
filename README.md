@@ -36,6 +36,7 @@
 
 <h2>Acknowedgments</h2>
 <ul>
-  <li><b>Leaflet.js:</b>[https://leafletjs.com/ for the interactive maps](https://leafletjs.com/ for the interactive maps.).</li>
-  <li><b>PostgreSQL:</b>https://leafletjs.com/ for the interactive maps.</li>
+  <li><b>Leaflet.js:</b>https://leafletjs.com/ for the interactive maps.</li>
+  <li><b>PostgreSQL:</b>https://www.postgresql.org/ for the database management.</li>
+  <li><b>Passport.js:</b>https://www.passportjs.org/ for the user authentication.</li>
 </ul>
